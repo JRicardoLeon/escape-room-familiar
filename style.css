@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0b0d0f;
+    color: #f1f1f1;
+}
+
+#game {
+    min-height: 100vh;
+}
+
+.screen {
+    display: none;
+    min-height: 100vh;
+    width: 100%;
+    padding: 60px 8%;
+    text-align: center;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.screen.active {
+    display: flex;
+}
+
+
+/* =========================
+   ELEMENTOS GENERALES
+========================= */
+
+.icon {
+    font-size: 80px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(42px, 7vw, 90px);
+    line-height: 0.95;
+    letter-spacing: 6px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    font-size: clamp(32px, 5vw, 64px);
+    letter-spacing: 3px;
+    margin-bottom: 35px;
+}
+
+p {
+    font-size: clamp(18px, 2.2vw, 28px);
+    line-height: 1.5;
+}
+
+
+/* =========================
+   INICIO
+========================= */
+
+.classified {
+    border: 2px solid #c62828;
+    color: #ef5350;
+    padding: 8px 20px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 35px;
+}
+
+.case-number {
+    font-size: 20px;
+    letter-spacing: 5px;
+    opacity: 0.7;
+    margin-bottom: 40px;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin-bottom: 25px;
+}
+
+.classified-text {
+    font-size: 16px;
+    letter-spacing: 4px;
+    opacity: 0.5;
+    margin-bottom: 45px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+    border: none;
+    padding: 20px 45px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 8px;
+
+    background: #f1f1f1;
+    color: #0b0d0f;
+
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================
+   REGLAS
+========================= */
+
+.rules {
+    max-width: 850px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+.rules p {
+    padding: 15px 0;
+    border-bottom: 1px solid #292d31;
+}
+
+.warning {
+    max-width: 850px;
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 40px;
+
+    border: 1px solid #555;
+    border-radius: 8px;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   PRUEBA 1
+========================= */
+
+.test-header {
+    width: 100%;
+    max-width: 1000px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 16px;
+    letter-spacing: 2px;
+    opacity: 0.6;
+
+    margin-bottom: 45px;
+}
+
+.question-counter {
+    font-size: 18px;
+    opacity: 0.6;
+    margin-bottom: 20px;
+}
+
+.question-box {
+    width: 100%;
+    max-width: 900px;
+
+    padding: 35px;
+    margin-bottom: 35px;
+
+    border: 1px solid #3c4248;
+    border-radius: 10px;
+}
+
+.question-box h3 {
+    font-size: clamp(25px, 3.5vw, 44px);
+    line-height: 1.3;
+}
+
+.answers {
+    width: 100%;
+    max-width: 900px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.answer-button {
+    width: 100%;
+    padding: 22px;
+
+    background: #171a1e;
+    color: #f1f1f1;
+
+    border: 1px solid #3c4248;
+}
+
+.answer-button:hover {
+    background: #22272c;
+}
+
+.feedback {
+    min-height: 60px;
+    margin-top: 25px;
+
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   COMPLETADO
+========================= */
+
+.success-icon {
+    font-size: 100px;
+    margin-bottom: 25px;
+}
+
+.score {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 20px 0 35px;
+}
+
+.clue {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    padding: 25px 50px;
+    margin-bottom: 15px;
+
+    border: 1px dashed #666;
+    border-radius: 10px;
+}
+
+.clue span {
+    font-size: 15px;
+    letter-spacing: 3px;
+    opacity: 0.6;
+}
+
+.clue strong {
+    font-size: 36px;
+    letter-spacing: 5px;
+}
+
+.small-text {
+    font-size: 16px;
+    opacity: 0.6;
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .screen {
+        padding: 35px 20px;
+    }
+
+    .answers {
+        grid-template-columns: 1fr;
+    }
+
+    .test-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        letter-spacing: 3px;
+    }
+}

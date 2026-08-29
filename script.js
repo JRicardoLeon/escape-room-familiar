@@ -1,0 +1,154 @@
+const questions = [
+    {
+        question: "Sin contar a los abuelos... ¿quién es oficialmente el mejor cocinero de la familia?",
+        answers: [
+            "Alicia",
+            "Jose",
+            "Ricardo",
+            "Francisco"
+        ],
+        correct: "Ricardo"
+    },
+
+    {
+        question: '¿Quién tiene mayor probabilidad de decir "Ya voy llegando" cuando todavía ni siquiera ha salido?',
+        answers: [
+            "Francisco",
+            "Jose",
+            "Alicia",
+            "Ricardo"
+        ],
+        correct: "Alicia"
+    },
+
+    {
+        question: "Se ha detectado un fenómeno extraño... ¿quién tiene mayor capacidad para quedarse dormido mientras el resto continúa haciendo ruido?",
+        answers: [
+            "Ricardo",
+            "Jose",
+            "Alicia",
+            "Francisco"
+        ],
+        correct: "Jose"
+    },
+
+    {
+        question: "Durante una época desaparecían misteriosamente películas de la casa. ¿Quién tenía la costumbre de esconderlas entre la ropa?",
+        answers: [
+            "Ricardo",
+            "Jose",
+            "Alicia",
+            "Pacho"
+        ],
+        correct: "Pacho"
+    }
+];
+
+
+let currentQuestion = 0;
+
+
+/* =========================
+   CAMBIAR DE PANTALLA
+========================= */
+
+function showScreen(screenId) {
+
+    const screens = document.querySelectorAll(".screen");
+
+    screens.forEach(screen => {
+        screen.classList.remove("active");
+    });
+
+    const targetScreen = document.getElementById(screenId);
+
+    if (targetScreen) {
+        targetScreen.classList.add("active");
+    }
+}
+
+
+/* =========================
+   CARGAR PREGUNTA
+========================= */
+
+function loadQuestion() {
+
+    const question = questions[currentQuestion];
+
+    document.getElementById("question-number").textContent =
+        currentQuestion + 1;
+
+    document.getElementById("question-text").textContent =
+        question.question;
+
+    const answersContainer =
+        document.getElementById("answers");
+
+    answersContainer.innerHTML = "";
+
+    document.getElementById("feedback").textContent = "";
+
+    question.answers.forEach(answer => {
+
+        const button = document.createElement("button");
+
+        button.textContent = answer;
+
+        button.classList.add("answer-button");
+
+        button.onclick = () => checkAnswer(answer);
+
+        answersContainer.appendChild(button);
+    });
+}
+
+
+/* =========================
+   COMPROBAR RESPUESTA
+========================= */
+
+function checkAnswer(answer) {
+
+    const question = questions[currentQuestion];
+
+    const feedback =
+        document.getElementById("feedback");
+
+    if (answer === question.correct) {
+
+        feedback.textContent = "✅ ¡CORRECTO!";
+
+        setTimeout(() => {
+
+            currentQuestion++;
+
+            if (currentQuestion >= questions.length) {
+
+                showScreen("screen-test-1-complete");
+
+            } else {
+
+                loadQuestion();
+
+            }
+
+        }, 900);
+
+    } else {
+
+        feedback.textContent =
+            "❌ ¡NOOO! Intenten nuevamente. 😂";
+    }
+}
+
+
+/* =========================
+   INICIAR PRUEBA 1
+========================= */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    loadQuestion();
+
+});

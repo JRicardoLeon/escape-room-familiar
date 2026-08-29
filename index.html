@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expediente Familiar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main id="game">
+
+        <!-- =========================
+             PANTALLA DE INICIO
+        ========================== -->
+        <section id="screen-start" class="screen active">
+
+            <div class="classified">CONFIDENCIAL</div>
+
+            <div class="icon">🔐</div>
+
+            <h1>EXPEDIENTE<br>FAMILIAR</h1>
+
+            <div class="case-number">
+                CASO #0829
+            </div>
+
+            <p class="intro-text">
+                Se ha detectado un acontecimiento desconocido
+                dentro de la familia.
+            </p>
+
+            <p class="classified-text">
+                INFORMACIÓN CLASIFICADA
+            </p>
+
+            <button onclick="showScreen('screen-rules')">
+                COMENZAR MISIÓN
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             INSTRUCCIONES
+        ========================== -->
+        <section id="screen-rules" class="screen">
+
+            <div class="icon">📋</div>
+
+            <h2>REGLAS DE LA MISIÓN</h2>
+
+            <div class="rules">
+
+                <p>👨‍👩‍👧 <strong>1.</strong> Todas las pruebas deben resolverse en equipo.</p>
+
+                <p>🗣️ <strong>2.</strong> Pueden discutir las respuestas.</p>
+
+                <p>🔎 <strong>3.</strong> Algunas pistas podrían parecer no tener sentido.</p>
+
+                <p>⚠️ <strong>4.</strong> No todo es lo que parece.</p>
+
+                <p>📝 <strong>5.</strong> Cuando encuentren una pista, recuerden guardarla.</p>
+
+            </div>
+
+            <div class="warning">
+                <span>⚠️</span>
+                Trabajen juntos. La misión apenas comienza.
+            </div>
+
+            <button onclick="showScreen('screen-test-1')">
+                ACEPTAR MISIÓN
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             PRUEBA 1
+        ========================== -->
+        <section id="screen-test-1" class="screen">
+
+            <div class="test-header">
+                <span>EXPEDIENTE #001</span>
+                <span>🧩 PRUEBA 1</span>
+            </div>
+
+            <h2>¿QUÉ TANTO CONOCEN<br>A LA FAMILIA?</h2>
+
+            <p class="question-counter">
+                Pregunta <span id="question-number">1</span> de 4
+            </p>
+
+            <div class="question-box">
+
+                <h3 id="question-text">
+                    ¿Quién es oficialmente el mejor cocinero de la familia?
+                </h3>
+
+            </div>
+
+            <div id="answers" class="answers"></div>
+
+            <div id="feedback" class="feedback"></div>
+
+        </section>
+
+
+        <!-- =========================
+             PRUEBA 1 COMPLETADA
+        ========================== -->
+        <section id="screen-test-1-complete" class="screen">
+
+            <div class="success-icon">🎯</div>
+
+            <h2>¡PRUEBA SUPERADA!</h2>
+
+            <p>
+                Definitivamente conocen demasiado bien
+                a esta familia. 😂
+            </p>
+
+            <div class="score">
+                4 / 4
+            </div>
+
+            <div class="clue">
+                <span>🔎 PISTA RECUPERADA</span>
+                <strong>FAMILIA</strong>
+            </div>
+
+            <p class="small-text">
+                Guárdenla. La necesitarán más adelante.
+            </p>
+
+            <button onclick="showScreen('screen-test-2')">
+                CONTINUAR →
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             PLACEHOLDER PRUEBA 2
+        ========================== -->
+        <section id="screen-test-2" class="screen">
+
+            <div class="icon">🐈</div>
+
+            <h2>PRÓXIMAMENTE...</h2>
+
+            <p>
+                El caso de los gatos será desbloqueado
+                en la siguiente etapa.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
