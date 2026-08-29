@@ -152,3 +152,31 @@ document.addEventListener("DOMContentLoaded", () => {
     loadQuestion();
 
 });
+
+/* =========================
+   PRUEBA 2 - CASO DE LOS GATOS
+========================= */
+
+function checkCatAnswer(answer) {
+
+    const feedback =
+        document.getElementById("cat-feedback");
+
+    if (answer === "gatos") {
+
+        feedback.textContent =
+            "✅ ¡CASO RESUELTO!";
+
+        setTimeout(() => {
+
+            showScreen("screen-test-2-complete");
+
+        }, 900);
+
+    } else {
+
+        feedback.textContent =
+            "❌ Teoría descartada. Revisen nuevamente las evidencias. 😂";
+
+    }
+}

@@ -143,21 +143,240 @@
         </section>
 
 
-        <!-- =========================
-             PLACEHOLDER PRUEBA 2
-        ========================== -->
-        <section id="screen-test-2" class="screen">
+<!-- =========================
+     PRUEBA 2 - CASO DE LOS GATOS
+========================== -->
+<section id="screen-test-2" class="screen">
 
-            <div class="icon">🐈</div>
+    <div class="test-header">
+        <span>EXPEDIENTE #002</span>
+        <span>🐈 PRUEBA 2</span>
+    </div>
 
-            <h2>PRÓXIMAMENTE...</h2>
+    <div class="icon">🐈</div>
+
+    <h2>EL CASO DE<br>"DANIELLL..."</h2>
+
+    <div class="case-info">
+        <span>📍 LUGAR: LA FINCA</span>
+        <span>🌙 MOMENTO: DURANTE LA NOCHE</span>
+    </div>
+
+    <div class="story-box">
+
+        <p>
+            Un miembro de la familia reportó haber escuchado
+            una extraña voz durante la noche.
+        </p>
+
+        <p class="quote">
+            "Daniellll..."
+        </p>
+
+        <p class="quote">
+            "Daniellll..."
+        </p>
+
+        <p>
+            El testigo permaneció despierto durante buena parte
+            de la noche, convencido de que algo extraño estaba
+            ocurriendo.
+        </p>
+
+    </div>
+
+    <p class="investigation-text">
+        🕵️ Los investigadores han decidido reabrir el caso.
+    </p>
+
+    <button onclick="showScreen('screen-test-2-evidence')">
+        🔎 REVISAR EL CASO
+    </button>
+
+</section>
+
+
+<!-- =========================
+     PRUEBA 2 - EVIDENCIAS
+========================== -->
+<section id="screen-test-2-evidence" class="screen">
+
+    <div class="test-header">
+        <span>EXPEDIENTE #002</span>
+        <span>🔎 EVIDENCIAS</span>
+    </div>
+
+    <h2>REVISEN LAS<br>EVIDENCIAS</h2>
+
+    <div class="evidence-grid">
+
+        <div class="evidence-card">
+            <span class="evidence-number">EVIDENCIA 01</span>
+            <div class="evidence-icon">🏠</div>
+            <p>
+                Los sonidos parecían venir
+                del techo.
+            </p>
+        </div>
+
+        <div class="evidence-card">
+            <span class="evidence-number">EVIDENCIA 02</span>
+            <div class="evidence-icon">🌙</div>
+            <p>
+                Durante la noche se escuchaban
+                ruidos extraños sobre la casa.
+            </p>
+        </div>
+
+        <div class="evidence-card">
+            <span class="evidence-number">EVIDENCIA 03</span>
+            <div class="evidence-icon">🐈</div>
+            <p>
+                En la finca había gatos.
+            </p>
+        </div>
+
+    </div>
+
+    <button onclick="showScreen('screen-test-2-question')">
+        CONTINUAR INVESTIGACIÓN →
+    </button>
+
+</section>
+
+
+<!-- =========================
+     PRUEBA 2 - PREGUNTA
+========================== -->
+<section id="screen-test-2-question" class="screen">
+
+    <div class="test-header">
+        <span>EXPEDIENTE #002</span>
+        <span>🕵️ CONCLUSIÓN</span>
+    </div>
+
+    <h2>¿QUÉ ESTABA PASANDO<br>REALMENTE?</h2>
+
+    <p class="question-counter">
+        Seleccionen la teoría correcta
+    </p>
+
+    <div id="cat-answers" class="answers">
+
+        <button
+            class="answer-button"
+            onclick="checkCatAnswer('ente')">
+            👻 Un ente estaba intentando comunicarse.
+        </button>
+
+        <button
+            class="answer-button"
+            onclick="checkCatAnswer('daniel')">
+            🗣️ Alguien estaba llamando a Daniel.
+        </button>
+
+        <button
+            class="answer-button"
+            onclick="checkCatAnswer('gatos')">
+            🐈 Los gatos estaban peleando en el techo.
+        </button>
+
+        <button
+            class="answer-button"
+            onclick="checkCatAnswer('francisco')">
+            😴 Francisco estaba soñando.
+        </button>
+
+    </div>
+
+    <div id="cat-feedback" class="feedback"></div>
+
+</section>
+
+
+    <!-- =========================
+        PRUEBA 2 - COMPLETADA
+    ========================== -->
+    <section id="screen-test-2-complete" class="screen">
+
+        <div class="success-icon">🔎</div>
+
+        <h2>CASO RESUELTO</h2>
+
+        <div class="story-box">
 
             <p>
-                El caso de los gatos será desbloqueado
-                en la siguiente etapa.
+                Después de analizar las evidencias...
             </p>
 
-        </section>
+            <p>
+                Después de reconstruir los hechos...
+            </p>
+
+            <p>
+                Y después de años de investigación...
+            </p>
+
+            <p>
+                La explicación oficial es:
+            </p>
+
+            <div class="big-reveal">
+                🐈🐈
+                <br>
+                GATOS
+            </div>
+
+            <p>
+                Sí.
+            </p>
+
+            <p>
+                Eran los gatos peleando en el techo. 😂
+            </p>
+
+            <p>
+                Y Francisco pasó la noche convencido de que
+                alguien estaba diciendo:
+            </p>
+
+            <p class="quote">
+                "Daniellll..."
+            </p>
+
+        </div>
+
+        <div class="clue">
+            <span>🔎 PISTA RECUPERADA</span>
+            <strong>TECHO</strong>
+        </div>
+
+        <p class="small-text">
+            🎒 Pista guardada.
+        </p>
+
+        <button onclick="showScreen('screen-test-3')">
+            CONTINUAR →
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+        PLACEHOLDER PRUEBA 3
+    ========================== -->
+    <section id="screen-test-3" class="screen">
+
+        <div class="icon">🥤</div>
+
+        <h2>PRÓXIMAMENTE...</h2>
+
+        <p>
+            El experimento culinario será desbloqueado
+            en la siguiente etapa.
+        </p>
+
+</section>
 
     </main>
 
