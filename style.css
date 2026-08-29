@@ -281,6 +281,14 @@ button:active {
         grid-template-columns: 1fr;
     }
 
+    .evidence-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ingredients {
+        grid-template-columns: 1fr;
+    }
+
     .test-header {
         flex-direction: column;
         gap: 10px;
@@ -400,4 +408,47 @@ button:active {
     letter-spacing: 5px;
 
     margin: 30px 0;
+}
+
+/* =========================
+   PRUEBA 3 - COCINA
+========================= */
+
+.ingredients {
+    width: 100%;
+    max-width: 850px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-bottom: 35px;
+}
+
+.ingredient-card {
+    padding: 30px 20px;
+
+    background: #14171a;
+
+    border: 1px solid #3c4248;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 190px;
+}
+
+.ingredient-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.ingredient-card strong {
+    font-size: 16px;
+    letter-spacing: 3px;
+    opacity: 0.7;
 }

@@ -180,3 +180,31 @@ function checkCatAnswer(answer) {
 
     }
 }
+
+/* =========================
+   PRUEBA 3 - EXPERIMENTO CULINARIO
+========================= */
+
+function checkCookingAnswer(answer) {
+
+    const feedback =
+        document.getElementById("cooking-feedback");
+
+    if (answer === "coca") {
+
+        feedback.textContent =
+            "✅ ¡EXPERIMENTO CONFIRMADO!";
+
+        setTimeout(() => {
+
+            showScreen("screen-test-3-complete");
+
+        }, 900);
+
+    } else {
+
+        feedback.textContent =
+            "❌ Esa receta no aparece en los archivos de Pacho. 😂";
+
+    }
+}

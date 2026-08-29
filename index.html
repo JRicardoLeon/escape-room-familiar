@@ -362,19 +362,214 @@
     </section>
 
 
-    <!-- =========================
-        PLACEHOLDER PRUEBA 3
-    ========================== -->
-    <section id="screen-test-3" class="screen">
+<!-- =========================
+     PRUEBA 3 - EXPERIMENTO CULINARIO
+========================== -->
+<section id="screen-test-3" class="screen">
 
-        <div class="icon">🥤</div>
+    <div class="test-header">
+        <span>EXPEDIENTE #003</span>
+        <span>🥤 PRUEBA 3</span>
+    </div>
 
-        <h2>PRÓXIMAMENTE...</h2>
+    <div class="icon">🚨</div>
+
+    <h2>ALERTA<br>GASTRONÓMICA</h2>
+
+    <div class="warning">
+        <span>🚨</span>
+        Se ha detectado un extraño experimento culinario.
+    </div>
+
+    <p class="investigation-text">
+        Los investigadores han encontrado evidencia
+        de una receta experimental.
+    </p>
+
+    <button onclick="showScreen('screen-test-3-evidence')">
+        🔎 INVESTIGAR EXPERIMENTO
+    </button>
+
+</section>
+
+
+<!-- =========================
+     PRUEBA 3 - EVIDENCIAS
+========================== -->
+<section id="screen-test-3-evidence" class="screen">
+
+    <div class="test-header">
+        <span>EXPEDIENTE #003</span>
+        <span>🔎 EVIDENCIAS</span>
+    </div>
+
+    <h2>LOS ELEMENTOS<br>DEL EXPERIMENTO</h2>
+
+    <div class="ingredients">
+
+        <div class="ingredient-card">
+            <div class="ingredient-icon">🐔</div>
+            <strong>POLLO</strong>
+        </div>
+
+        <div class="ingredient-card">
+            <div class="ingredient-icon">🥤</div>
+            <strong>BEBIDA</strong>
+        </div>
+
+        <div class="ingredient-card">
+            <div class="ingredient-icon">❓</div>
+            <strong>RECETA</strong>
+        </div>
+
+    </div>
+
+    <div class="story-box">
 
         <p>
-            El experimento culinario será desbloqueado
-            en la siguiente etapa.
+            El responsable del experimento ha sido
+            identificado.
         </p>
+
+        <p class="quote">
+            PACHO
+        </p>
+
+        <p>
+            Sin embargo, la receta exacta todavía
+            permanece clasificada.
+        </p>
+
+    </div>
+
+    <button onclick="showScreen('screen-test-3-question')">
+        DESCUBRIR LA RECETA →
+    </button>
+
+</section>
+
+
+<!-- =========================
+     PRUEBA 3 - PREGUNTA
+========================== -->
+<section id="screen-test-3-question" class="screen">
+
+    <div class="test-header">
+        <span>EXPEDIENTE #003</span>
+        <span>🧪 EXPERIMENTO</span>
+    </div>
+
+    <h2>¿QUÉ PREPARÓ<br>PACHO?</h2>
+
+    <p class="question-counter">
+        Seleccionen la combinación correcta
+    </p>
+
+    <div class="answers">
+
+        <button
+            class="answer-button"
+            onclick="checkCookingAnswer('cafe')">
+            🐔 + ☕<br>
+            Pollo con café
+        </button>
+
+        <button
+            class="answer-button"
+            onclick="checkCookingAnswer('coca')">
+            🐔 + 🥤<br>
+            Pollo con Coca-Cola
+        </button>
+
+        <button
+            class="answer-button"
+            onclick="checkCookingAnswer('chocolate')">
+            🐔 + 🍫<br>
+            Pollo con chocolate
+        </button>
+
+        <button
+            class="answer-button"
+            onclick="checkCookingAnswer('mango')">
+            🐔 + 🥭<br>
+            Pollo con jugo de mango
+        </button>
+
+    </div>
+
+    <div id="cooking-feedback" class="feedback"></div>
+
+</section>
+
+
+    <!-- =========================
+        PRUEBA 3 - COMPLETADA
+    ========================== -->
+    <section id="screen-test-3-complete" class="screen">
+
+        <div class="success-icon">🚨</div>
+
+        <h2>EXPERIMENTO<br>CONFIRMADO</h2>
+
+        <div class="story-box">
+
+            <p>
+                Después de analizar todas las evidencias...
+            </p>
+
+            <p>
+                Los investigadores confirman que Pacho
+                realizó el siguiente experimento:
+            </p>
+
+            <div class="big-reveal">
+                🐔 + 🥤
+                <br>
+                POLLO CON<br>COCA-COLA
+            </div>
+
+            <p>
+                El comité gastronómico familiar todavía
+                no ha determinado si esto fue:
+            </p>
+
+            <p>
+                😂 Un acto de valentía<br>
+                😂 Un accidente<br>
+                😂 Un crimen culinario
+            </p>
+
+        </div>
+
+        <div class="clue">
+            <span>🔎 PISTA RECUPERADA</span>
+            <strong>COCA-COLA</strong>
+        </div>
+
+        <p class="small-text">
+            🎒 Pista guardada.
+        </p>
+
+        <button onclick="showScreen('screen-test-4')">
+            CONTINUAR →
+        </button>
+
+</section>
+
+
+<!-- =========================
+     PLACEHOLDER PRUEBA 4
+========================== -->
+<section id="screen-test-4" class="screen">
+
+    <div class="icon">🏕️</div>
+
+    <h2>PRÓXIMAMENTE...</h2>
+
+    <p>
+        El viaje perdido será desbloqueado
+        en la siguiente etapa.
+    </p>
 
 </section>
 
