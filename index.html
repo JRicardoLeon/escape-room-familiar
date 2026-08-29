@@ -558,18 +558,482 @@
 
 
 <!-- =========================
-     PLACEHOLDER PRUEBA 4
+     PRUEBA 4 - VIAJE PERDIDO
 ========================== -->
 <section id="screen-test-4" class="screen">
 
-    <div class="icon">🏕️</div>
+    <div class="test-header">
+        <span>EXPEDIENTE #004</span>
+        <span>🏕️ PRUEBA 4</span>
+    </div>
 
-    <h2>PRÓXIMAMENTE...</h2>
+    <div class="icon">🗺️</div>
 
-    <p>
-        El viaje perdido será desbloqueado
-        en la siguiente etapa.
+    <h2>EL VIAJE<br>PERDIDO</h2>
+
+    <div class="story-box">
+
+        <p>
+            Los investigadores encontraron un registro
+            de un antiguo viaje familiar.
+        </p>
+
+        <p>
+            El problema...
+        </p>
+
+        <p class="quote">
+            EL DESTINO FUE ELIMINADO DEL ARCHIVO.
+        </p>
+
+        <p>
+            Solo quedaron algunas pistas.
+        </p>
+
+    </div>
+
+    <button onclick="showScreen('screen-test-4-evidence')">
+        🔎 REVISAR EVIDENCIAS
+    </button>
+
+</section>
+
+
+<!-- =========================
+     PRUEBA 4 - EVIDENCIAS
+========================== -->
+<section id="screen-test-4-evidence" class="screen">
+
+    <div class="test-header">
+        <span>EXPEDIENTE #004</span>
+        <span>🔎 EVIDENCIAS</span>
+    </div>
+
+    <h2>LAS PISTAS<br>DEL VIAJE</h2>
+
+    <div class="evidence-grid">
+
+        <div class="evidence-card">
+
+            <span class="evidence-number">
+                EVIDENCIA 01
+            </span>
+
+            <div class="evidence-icon">
+                🌳
+            </div>
+
+            <p>
+                El destino estaba rodeado
+                de naturaleza.
+            </p>
+
+        </div>
+
+
+        <div class="evidence-card">
+
+            <span class="evidence-number">
+                EVIDENCIA 02
+            </span>
+
+            <div class="evidence-icon">
+                🏕️
+            </div>
+
+            <p>
+                La familia se hospedó
+                en una cabaña.
+            </p>
+
+        </div>
+
+
+        <div class="evidence-card">
+
+            <span class="evidence-number">
+                EVIDENCIA 03
+            </span>
+
+            <div class="evidence-icon">
+                👨‍👩‍👧‍👦
+            </div>
+
+            <p>
+                Fue un viaje en el que
+                estuvieron todos juntos.
+            </p>
+
+        </div>
+
+    </div>
+
+    <button onclick="showScreen('screen-test-4-question')">
+        IDENTIFICAR DESTINO →
+    </button>
+
+</section>
+
+
+<!-- =========================
+     PRUEBA 4 - PREGUNTA
+========================== -->
+<section id="screen-test-4-question" class="screen">
+
+    <div class="test-header">
+        <span>EXPEDIENTE #004</span>
+        <span>🕵️ CONCLUSIÓN</span>
+    </div>
+
+    <h2>¿DÓNDE ESTUVO<br>LA FAMILIA?</h2>
+
+    <p class="question-counter">
+        Seleccionen el destino correcto
     </p>
+
+    <div class="answers">
+
+        <button
+            class="answer-button"
+            onclick="checkTripAnswer('pamplona')">
+            📍 Pamplona
+        </button>
+
+        <button
+            class="answer-button"
+            onclick="checkTripAnswer('ocana')">
+            📍 Ocaña
+        </button>
+
+        <button
+            class="answer-button"
+            onclick="checkTripAnswer('gramalote')">
+            📍 Gramalote
+        </button>
+
+        <button
+            class="answer-button"
+            onclick="checkTripAnswer('chinacota')">
+            📍 Chinácota
+        </button>
+
+    </div>
+
+    <div id="trip-feedback" class="feedback"></div>
+
+</section>
+
+
+    <!-- =========================
+        PRUEBA 4 - COMPLETADA
+    ========================== -->
+    <section id="screen-test-4-complete" class="screen">
+
+        <div class="success-icon">🏕️</div>
+
+        <h2>DESTINO<br>LOCALIZADO</h2>
+
+        <div class="story-box">
+
+            <p>
+                Las evidencias coinciden.
+            </p>
+
+            <div class="big-reveal">
+                📍
+                <br>
+                GRAMALOTE
+            </div>
+
+            <p>
+                🌳 Naturaleza
+            </p>
+
+            <p>
+                🏕️ Cabaña
+            </p>
+
+            <p>
+                👨‍👩‍👧‍👦 Toda la familia
+            </p>
+
+            <p>
+                Caso cerrado.
+            </p>
+
+        </div>
+
+        <div class="clue">
+
+            <span>🔎 PISTA RECUPERADA</span>
+
+            <strong>GRAMALOTE</strong>
+
+        </div>
+
+        <p class="small-text">
+            🎒 Pista guardada.
+        </p>
+
+        <button onclick="showScreen('screen-test-5')">
+            CONTINUAR →
+        </button>
+
+</section>
+
+
+<!-- =========================
+     PRUEBA 5 - IDIOMA FAMILIAR
+========================== -->
+<section id="screen-test-5" class="screen">
+
+    <div class="test-header">
+        <span>EXPEDIENTE #005</span>
+        <span>🗣️ PRUEBA 5</span>
+    </div>
+
+    <div class="icon">🗣️</div>
+
+    <h2>EL IDIOMA<br>FAMILIAR</h2>
+
+    <div class="story-box">
+
+        <p>
+            Los investigadores han descubierto
+            un extraño fenómeno lingüístico.
+        </p>
+
+        <p>
+            Dentro de esta familia existen palabras
+            y expresiones que aparentemente solo
+            tienen sentido para sus integrantes.
+        </p>
+
+        <p class="quote">
+            EL DICCIONARIO OFICIAL<br>
+            HA SIDO DESCLASIFICADO.
+        </p>
+
+    </div>
+
+    <button onclick="showScreen('screen-test-5-dictionary')">
+        📖 ABRIR DICCIONARIO
+    </button>
+
+</section>
+
+
+<!-- =========================
+     PRUEBA 5 - DICCIONARIO
+========================== -->
+<section id="screen-test-5-dictionary" class="screen">
+
+    <div class="test-header">
+        <span>EXPEDIENTE #005</span>
+        <span>📖 DICCIONARIO</span>
+    </div>
+
+    <h2>DICCIONARIO<br>FAMILIAR</h2>
+
+    <div class="dictionary">
+
+        <div class="dictionary-entry">
+
+            <span class="word">
+                MORROCOID
+            </span>
+
+            <span class="meaning">
+                Apodo altamente clasificado.
+            </span>
+
+        </div>
+
+
+        <div class="dictionary-entry">
+
+            <span class="word">
+                LA COBRA
+            </span>
+
+            <span class="meaning">
+                Segundo nombre altamente clasificado.
+            </span>
+
+        </div>
+
+
+        <div class="dictionary-entry">
+
+            <span class="word">
+                GONO PIOLIN
+            </span>
+
+            <span class="meaning">
+                Identidad todavía bajo investigación.
+            </span>
+
+        </div>
+
+
+        <div class="dictionary-entry">
+
+            <span class="word">
+                JIIIIII VEEEEEEERRRGAAAAAA
+            </span>
+
+            <span class="meaning">
+                Expresión utilizada ante una situación
+                que genera sorpresa, impresión o impacto.
+            </span>
+
+        </div>
+
+    </div>
+
+    <button onclick="showScreen('screen-test-5-question')">
+        🔎 DESCIFRAR FRASE
+    </button>
+
+</section>
+
+
+<!-- =========================
+     PRUEBA 5 - PREGUNTA
+========================== -->
+<section id="screen-test-5-question" class="screen">
+
+    <div class="test-header">
+        <span>EXPEDIENTE #005</span>
+        <span>🔐 FRASE CLASIFICADA</span>
+    </div>
+
+    <div class="icon">🤔</div>
+
+    <h2>ATENCIÓN</h2>
+
+    <div class="story-box">
+
+        <p>
+            Un investigador acaba de encontrar
+            una frase escrita en un documento familiar.
+        </p>
+
+        <p class="quote">
+            "JIIIIII VEEEEEEERRRGAAAAAA"
+        </p>
+
+        <p>
+            ¿Qué significa realmente esta expresión?
+        </p>
+
+    </div>
+
+    <div class="answers">
+
+        <button
+            class="answer-button"
+            onclick="checkLanguageAnswer('sorpresa')">
+            😱 Expresión de sorpresa o impresión
+        </button>
+
+        <button
+            class="answer-button"
+            onclick="checkLanguageAnswer('hambre')">
+            🍔 Significa que alguien tiene hambre
+        </button>
+
+        <button
+            class="answer-button"
+            onclick="checkLanguageAnswer('saludo')">
+            👋 Es una forma secreta de saludar
+        </button>
+
+        <button
+            class="answer-button"
+            onclick="checkLanguageAnswer('despedida')">
+            🚪 Es una forma familiar de despedirse
+        </button>
+
+    </div>
+
+    <div id="language-feedback" class="feedback"></div>
+
+</section>
+
+
+    <!-- =========================
+        PRUEBA 5 - COMPLETADA
+    ========================== -->
+    <section id="screen-test-5-complete" class="screen">
+
+        <div class="success-icon">🗣️</div>
+
+        <h2>IDIOMA<br>DESCIFRADO</h2>
+
+        <div class="story-box">
+
+            <p>
+                Los investigadores confirman que
+                la expresión pertenece oficialmente
+                al idioma familiar.
+            </p>
+
+            <div class="big-reveal">
+                😂
+                <br>
+                ¡JIIIIII VEEEEEEERRRGAAAAAA!
+            </div>
+
+            <p>
+                Traducción oficial:
+            </p>
+
+            <p>
+                <strong>
+                    Sorpresa, impresión o impacto.
+                </strong>
+            </p>
+
+            <p>
+                Aunque dependiendo del contexto...
+                puede significar prácticamente cualquier cosa. 😂
+            </p>
+
+        </div>
+
+        <div class="clue">
+
+            <span>🔎 PISTA RECUPERADA</span>
+
+            <strong>IDIOMA</strong>
+
+        </div>
+
+        <p class="small-text">
+            🎒 Pista guardada.
+        </p>
+
+        <button onclick="showScreen('screen-test-6')">
+            CONTINUAR →
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+        PLACEHOLDER PRUEBA 6
+    ========================== -->
+    <section id="screen-test-6" class="screen">
+
+        <div class="icon">🎵</div>
+
+        <h2>PRÓXIMAMENTE...</h2>
+
+        <p>
+            La última prueba será desbloqueada
+            en la siguiente etapa.
+        </p>
 
 </section>
 

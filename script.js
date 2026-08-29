@@ -208,3 +208,59 @@ function checkCookingAnswer(answer) {
 
     }
 }
+
+/* =========================
+   PRUEBA 4 - VIAJE PERDIDO
+========================= */
+
+function checkTripAnswer(answer) {
+
+    const feedback =
+        document.getElementById("trip-feedback");
+
+    if (answer === "gramalote") {
+
+        feedback.textContent =
+            "✅ ¡DESTINO LOCALIZADO!";
+
+        setTimeout(() => {
+
+            showScreen("screen-test-4-complete");
+
+        }, 900);
+
+    } else {
+
+        feedback.textContent =
+            "❌ Ese destino no coincide con las evidencias. 🕵️";
+
+    }
+}
+
+/* =========================
+   PRUEBA 5 - IDIOMA FAMILIAR
+========================= */
+
+function checkLanguageAnswer(answer) {
+
+    const feedback =
+        document.getElementById("language-feedback");
+
+    if (answer === "sorpresa") {
+
+        feedback.textContent =
+            "✅ ¡TRADUCCIÓN CORRECTA!";
+
+        setTimeout(() => {
+
+            showScreen("screen-test-5-complete");
+
+        }, 900);
+
+    } else {
+
+        feedback.textContent =
+            "❌ Traducción incorrecta. Consulten nuevamente el diccionario. 😂";
+
+    }
+}

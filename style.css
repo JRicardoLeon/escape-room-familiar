@@ -268,36 +268,57 @@ button:active {
 
 
 /* =========================
-   RESPONSIVE
+   PRUEBA 5 - DICCIONARIO
 ========================= */
 
-@media (max-width: 700px) {
+.dictionary {
+    width: 100%;
+    max-width: 850px;
 
-    .screen {
-        padding: 35px 20px;
-    }
+    display: flex;
+    flex-direction: column;
 
-    .answers {
-        grid-template-columns: 1fr;
-    }
+    gap: 15px;
 
-    .evidence-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .ingredients {
-        grid-template-columns: 1fr;
-    }
-
-    .test-header {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    h1 {
-        letter-spacing: 3px;
-    }
+    margin-bottom: 40px;
 }
+
+.dictionary-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding: 20px 25px;
+
+    background: #14171a;
+
+    border: 1px solid #3c4248;
+    border-radius: 8px;
+
+    text-align: left;
+}
+
+.word {
+    font-weight: bold;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+
+    white-space: nowrap;
+}
+
+.meaning {
+    font-size: 16px;
+
+    opacity: 0.65;
+
+    text-align: right;
+}
+
+
 /* =========================
    PRUEBA 2 - CASO GATOS
 ========================= */
@@ -451,4 +472,47 @@ button:active {
     font-size: 16px;
     letter-spacing: 3px;
     opacity: 0.7;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .screen {
+        padding: 35px 20px;
+    }
+
+    .answers {
+        grid-template-columns: 1fr;
+    }
+
+    .evidence-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ingredients {
+        grid-template-columns: 1fr;
+    }
+
+    .dictionary-entry {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .meaning {
+        text-align: left;
+    }
+
+    .test-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        letter-spacing: 3px;
+    }
 }
