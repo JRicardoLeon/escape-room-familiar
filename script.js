@@ -52,27 +52,13 @@ const questions = [
 
 const sounds = {
     "screen-intro": "sounds/intro.mp3",
-    "sound-test-3": "sounds/sonido-miedo.mp4",
+    "sound-test-3": "sounds/sonido-miedo.mp3",
     "screen-test-2": "sounds/test-2.mp3",
     "screen-test-4": "sounds/test-4.mp3",
     "screen-final": "sounds/final.mp3"
 };
 
-function showScreen(screenId) {
 
-    document.querySelectorAll('.screen').forEach(screen => {
-        screen.classList.remove('active');
-    });
-
-    const screen = document.getElementById(screenId);
-    screen.classList.add('active');
-
-    // Reproducir sonido de la pantalla
-    if (sounds[screenId]) {
-        const audio = new Audio(sounds[screenId]);
-        audio.play();
-    }
-}
 
 
 
@@ -294,5 +280,21 @@ function checkLanguageAnswer(answer) {
         feedback.textContent =
             "❌ Traducción incorrecta. Consulten nuevamente el diccionario. 😂";
 
+    }
+}
+
+function showScreen(screenId) {
+
+    document.querySelectorAll('.screen').forEach(screen => {
+        screen.classList.remove('active');
+    });
+
+    const screen = document.getElementById(screenId);
+    screen.classList.add('active');
+
+    // Reproducir sonido de la pantalla
+    if (sounds[screenId]) {
+        const audio = new Audio(sounds[screenId]);
+        audio.play();
     }
 }
