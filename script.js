@@ -50,17 +50,10 @@ const questions = [
 
 
 
-const sounds = {
-    "screen-intro": "sounds/intro.mp3",
-    "sound-test-3": "sounds/sonido-miedo.mp3",
-    "screen-test-2": "sounds/test-2.mp3",
-    "screen-test-4": "sounds/test-4.mp3",
-    "screen-final": "sounds/final.mp3"
-};
+function startMission() {
 
-
-
-
+    showScreen("screen-rules");
+}
 
 
 let currentQuestion = 0;
@@ -78,11 +71,59 @@ function showScreen(screenId) {
         screen.classList.remove("active");
     });
 
-    const targetScreen = document.getElementById(screenId);
+    const targetScreen =
+        document.getElementById(screenId);
 
     if (targetScreen) {
         targetScreen.classList.add("active");
     }
+
+
+    /* =========================
+       AUDIO SEGÚN LA PRUEBA
+    ========================= */
+
+    if (
+        screenId === "screen-rules" ||
+        screenId.startsWith("screen-test-1")
+    ) {
+
+        playAudio("relajante");
+
+    }
+
+    else if (
+        screenId.startsWith("screen-test-2")
+    ) {
+
+        playAudio("miedo");
+
+    }
+
+    else if (
+        screenId.startsWith("screen-test-3")
+    ) {
+
+        playAudio("cocina");
+
+    }
+
+    else if (
+        screenId.startsWith("screen-test-4")
+    ) {
+
+        playAudio("naturaleza");
+
+    }
+
+    else if (
+        screenId.startsWith("screen-test-5")
+    ) {
+
+        playAudio("rosa");
+
+    }
+
 }
 
 
@@ -283,18 +324,78 @@ function checkLanguageAnswer(answer) {
     }
 }
 
-function showScreen(screenId) {
+/* =========================
+   SISTEMA DE AUDIO
+========================= */
 
-    document.querySelectorAll('.screen').forEach(screen => {
-        screen.classList.remove('active');
+const audios = {
+
+    relajante:
+        document.getElementById("audio-relajante"),
+
+    miedo:
+        document.getElementById("audio-miedo"),
+
+    cocina:
+        document.getElementById("audio-cocina"),
+
+    naturaleza:
+        document.getElementById("audio-naturaleza"),
+
+    rosa:
+        document.getElementById("audio-rosa")
+};
+
+
+let currentAudio = null;
+
+
+function stopAllAudio() {
+
+    Object.values(audios).forEach(audio => {
+
+        audio.pause();
+        audio.currentTime = 0;
+
     });
 
-    const screen = document.getElementById(screenId);
-    screen.classList.add('active');
+    currentAudio = null;
+}
 
-    // Reproducir sonido de la pantalla
-    if (sounds[screenId]) {
-        const audio = new Audio(sounds[screenId]);
-        audio.play();
+
+function playAudio(name) {
+
+    const audio = audios[name];
+
+    if (!audio) {
+        return;
     }
+
+    // Si ya estamos reproduciendo este mismo audio,
+    // no hacemos nada.
+    if (currentAudio === audio && !audio.paused) {
+        return;
+    }
+
+    // Detener cualquier audio anterior
+    Object.values(audios).forEach(otherAudio => {
+
+        if (otherAudio !== audio) {
+
+            otherAudio.pause();
+            otherAudio.currentTime = 0;
+
+        }
+
+    });
+
+    currentAudio = audio;
+
+    audio.volume = 0.35;
+
+    audio.play().catch(error => {
+
+        console.log("Audio bloqueado:", error);
+
+    });
 }
