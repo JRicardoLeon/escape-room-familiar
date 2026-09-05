@@ -78,6 +78,15 @@ function showScreen(screenId) {
         targetScreen.classList.add("active");
     }
 
+    // La Prueba 6 no utiliza música ambiental
+    if (
+        screenId === "screen-test-6" ||
+        screenId.startsWith("screen-song-")
+    ) {
+
+        stopAllAudio();
+
+    }
 
     /* =========================
        AUDIO SEGÚN LA PRUEBA
@@ -360,6 +369,19 @@ function stopAllAudio() {
     });
 
     currentAudio = null;
+
+    // Detener también los intros musicales
+    if (typeof musicTracks !== "undefined") {
+
+        Object.values(musicTracks).forEach(song => {
+
+            song.pause();
+            song.currentTime = 0;
+
+        });
+
+    }
+
 }
 
 
@@ -398,4 +420,140 @@ function playAudio(name) {
         console.log("Audio bloqueado:", error);
 
     });
+}
+
+/* =========================
+   PRUEBA 6 - ADIVINA LA CANCIÓN
+========================= */
+
+const musicTracks = {
+
+    1: document.getElementById("audio-cancion-1"),
+
+    2: document.getElementById("audio-cancion-2"),
+
+    3: document.getElementById("audio-cancion-3"),
+
+    4: document.getElementById("audio-cancion-4")
+
+};
+
+
+let currentSong = null;
+
+
+/* Detener todos los intros */
+
+function stopAllSongs() {
+
+    Object.values(musicTracks).forEach(song => {
+
+        song.pause();
+        song.currentTime = 0;
+
+    });
+
+    currentSong = null;
+}
+
+
+/* Comenzar la prueba */
+
+function startMusicChallenge() {
+
+    stopAllSongs();
+
+    showScreen("screen-song-1");
+
+}
+
+
+/* Reproducir una canción */
+
+function playSong(number) {
+
+    stopAllSongs();
+
+    const song = musicTracks[number];
+
+    if (!song) {
+        return;
+    }
+
+    currentSong = song;
+
+    song.currentTime = 0;
+
+    song.volume = 0.8;
+
+    song.play().catch(error => {
+
+        console.log(
+            "No se pudo reproducir el audio:",
+            error
+        );
+
+    });
+}
+
+
+/* Respuestas correctas */
+
+const correctSongs = {
+
+    1: "el-condor",
+
+    2: "esa-mujer",
+
+    3: "la-reina",
+
+    4: "olvida"
+
+};
+
+
+/* Comprobar respuesta */
+
+function checkSongAnswer(question, answer) {
+
+    const feedback =
+        document.getElementById(
+            `song-feedback-${question}`
+        );
+
+
+    if (answer === correctSongs[question]) {
+
+        feedback.textContent =
+            "✅ ¡CORRECTO!";
+
+        stopAllSongs();
+
+
+        setTimeout(() => {
+
+            if (question < 4) {
+
+                showScreen(
+                    `screen-song-${question + 1}`
+                );
+
+            } else {
+
+                showScreen(
+                    "screen-test-6-complete"
+                );
+
+            }
+
+        }, 900);
+
+
+    } else {
+
+        feedback.textContent =
+            "❌ No es esa... escuchen nuevamente. 😂";
+
+    }
+
 }
