@@ -1,6 +1,6 @@
 const questions = [
     {
-        question: "Sin contar a los abuelos... ¿quién es el que mejor cocina de la familia?",
+        question: "Sin contar a los abuelos... ¿quién de esta lista creen que mejor cocina de la familia?",
         answers: [
             "Diana",
             "Miguel",
@@ -16,9 +16,9 @@ const questions = [
         question: '¿Quién tiene mayor probabilidad de decir "Ya estoy list@" cuando todavía ni siquiera ha salido?',
         answers: [
             "Diana",
-            "Jose",
+            "Paola",
             "Alicia",
-            "Ricardo"
+            "Miguel"
         ],
         correct: "Alicia"
     },
@@ -553,6 +553,52 @@ function checkSongAnswer(question, answer) {
 
         feedback.textContent =
             "❌ No es esa... escuchen nuevamente. 😂";
+
+    }
+}
+/* =========================
+   PRUEBA 7 - ACERTIJOS
+========================= */
+
+let currentRiddle = 1;
+
+
+/* =========================
+   INICIAR PRUEBA 7
+========================= */
+
+function startRiddleChallenge() {
+
+    currentRiddle = 1;
+
+    showScreen("screen-riddle-1");
+
+}
+
+
+/* =========================
+   RESPUESTA CORRECTA
+========================= */
+
+function riddleCorrect(riddleNumber) {
+
+    if (riddleNumber !== currentRiddle) {
+        return;
+    }
+
+    if (riddleNumber < 7) {
+
+        currentRiddle++;
+
+        showScreen(
+            `screen-riddle-${currentRiddle}`
+        );
+
+    } else {
+
+        showScreen(
+            "screen-test-7-complete"
+        );
 
     }
 
