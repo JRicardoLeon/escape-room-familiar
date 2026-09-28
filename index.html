@@ -36,6 +36,18 @@
         <source src="sounds/olvida-binomio.mp3" type="audio/mpeg">
     </audio>
 
+    <audio id="audio-polvora">
+        <source src="sounds/polvora.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="audio-cancion-bebe" loop>
+        <source src="sounds/cancion-bebe.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="audio-boda">
+        <source src="sounds/boda.mp3" type="audio/mpeg">
+    </audio>
+
     <main id="game">
         <!-- =========================
              PANTALLA DE INICIO
@@ -1396,7 +1408,7 @@
         <p>
             <strong>
                 ¿Cuál es la parte más dura
-                de un vegetal?
+                de un vegetal? 🥬🍅🥕🍆
             </strong>
         </p>
 
@@ -1466,6 +1478,662 @@
     </button>
 
 </section>
+
+    <!-- =========================================================
+        REVELACIÓN FINAL - MINI DISTRACCIÓN
+    ========================================================== -->
+
+    <section id="screen-final-transition" class="screen">
+
+        <div class="classified">ARCHIVO_FINAL.exe</div>
+
+        <div class="icon">🔐</div>
+
+        <h2>ACCESO<br>AUTORIZADO</h2>
+
+        <div class="story-box">
+
+            <p>
+                Se ha encontrado un expediente oculto.
+            </p>
+
+            <p>
+                Este archivo contiene información
+                clasificada.
+            </p>
+
+            <p class="quote">
+                ¿ESTÁN SEGUROS DE QUERER CONTINUAR?
+            </p>
+
+        </div>
+
+        <button onclick="startFinalDistraction()">
+            🔓 ABRIR EXPEDIENTE
+        </button>
+
+    </section>
+
+
+    <!-- =========================================================
+        MINI DISTRACCIÓN - PREGUNTA 1
+    ========================================================== -->
+
+    <section id="screen-final-question-1" class="screen">
+
+        <div class="test-header">
+            <span>ARCHIVO CLASIFICADO</span>
+            <span>🔎 PREGUNTA 1 DE 5</span>
+        </div>
+
+        <div class="icon">👀</div>
+
+        <h2>
+            ¿ALGUIEN DE AQUÍ<br>
+            LE GUSTA MIGAJEAR? 🫣
+        </h2>
+
+        <div class="story-box">
+
+            <p>
+                Señalen al sospechoso.
+            </p>
+
+            <p class="quote">
+                👀 TODOS SABEMOS QUIÉN ES...
+            </p>
+
+        </div>
+
+        <div id="final-question-feedback-1" class="feedback">
+            Esperando acusaciones familiares... 😂
+        </div>
+
+        <button onclick="nextFinalQuestion(1)">
+            👉 YA TENEMOS AL SOSPECHOSO
+        </button>
+
+    </section>
+
+
+    <!-- =========================================================
+        MINI DISTRACCIÓN - PREGUNTA 2
+    ========================================================== -->
+
+    <section id="screen-final-question-2" class="screen">
+
+        <div class="test-header">
+            <span>ARCHIVO CLASIFICADO</span>
+            <span>🔎 PREGUNTA 2 DE 5</span>
+        </div>
+
+        <div class="icon">📱</div>
+
+        <h2>
+            ¿ALGUIEN DE AQUÍ<br>
+            SE LA PASA PELEANDO CON SUS CONTACTOS DE WHATSAPP?
+        </h2>
+
+        <div class="story-box">
+
+            <p>
+                Todos conocen a esa persona.
+            </p>
+
+            <p class="quote">
+                📱 "YO NO FUI..."
+            </p>
+
+        </div>
+
+        <div id="final-question-feedback-2" class="feedback">
+            El grupo debe llegar a un consenso... 😂
+        </div>
+
+        <button onclick="nextFinalQuestion(2)">
+            👉 YA LO TENEMOS
+        </button>
+
+    </section>
+
+
+    <!-- =========================================================
+        MINI DISTRACCIÓN - PREGUNTA 3
+    ========================================================== -->
+
+    <section id="screen-final-question-3" class="screen">
+
+        <div class="test-header">
+            <span>ARCHIVO CLASIFICADO</span>
+            <span>🔎 PREGUNTA 3 DE 5</span>
+        </div>
+
+        <div class="icon">🍺</div>
+
+        <h2>
+            ¿QUIÉN DE AQUÍ<br>
+            QUIERE MÁS AL TRAGO 🍻 QUE AL AGUA?
+        </h2>
+
+        <div class="story-box">
+
+            <p>
+                Esta pregunta podría generar
+                conflictos familiares.
+            </p>
+
+            <p class="quote">
+                🍺 EL ARCHIVO RECOMIENDA NO DISCUTIR.
+            </p>
+
+        </div>
+
+        <div id="final-question-feedback-3" class="feedback">
+            Seleccionen al sospechoso... 😂
+        </div>
+
+        <button onclick="nextFinalQuestion(3)">
+            👉 SIGUIENTE →
+        </button>
+
+    </section>
+
+
+    <!-- =========================================================
+        MINI DISTRACCIÓN - PREGUNTA 4
+    ========================================================== -->
+
+    <section id="screen-final-question-4" class="screen">
+
+        <div class="test-header">
+            <span>ARCHIVO CLASIFICADO</span>
+            <span>🔎 PREGUNTA 4 DE 5</span>
+        </div>
+
+        <div class="icon">⚠️</div>
+
+        <h2>
+        🩴 ¿ALGUIEN DE AQUÍ<br>
+            SU MUJER LE PEGA? 👊🏻
+        </h2>
+
+        <div class="story-box">
+
+            <p>
+                El sistema solicita una respuesta
+                del grupo.
+            </p>
+
+            <p class="quote">
+                😂 ESTA PREGUNTA PODRÍA SER PELIGROSA.
+            </p>
+
+        </div>
+
+        <div id="final-question-feedback-4" class="feedback">
+            Procedan bajo su propio riesgo... 😂
+        </div>
+
+        <button onclick="nextFinalQuestion(4)">
+            👉 SIGUIENTE →
+        </button>
+
+    </section>
+
+
+    <!-- =========================================================
+        MINI DISTRACCIÓN - PREGUNTA 5
+    ========================================================== -->
+
+    <section id="screen-final-question-5" class="screen">
+
+        <div class="test-header">
+            <span>ARCHIVO CLASIFICADO</span>
+            <span>🔎 PREGUNTA 5 DE 5</span>
+        </div>
+
+        <div class="icon">👶</div>
+
+        <h2>
+            ¿QUIÉN DE AQUÍ<br>
+            SEGURO SERÁ PAPÁ?
+        </h2>
+
+        <div class="story-box">
+
+            <p>
+                Esta es la última pregunta
+                del expediente.
+            </p>
+
+            <p class="quote">
+                👀 PIÉNSENLO BIEN...
+            </p>
+
+        </div>
+
+        <div id="final-question-feedback-5" class="feedback">
+            ¿Quién será el elegido? 😂
+        </div>
+
+        <button onclick="nextFinalQuestion(5)">
+            🔎 CONFIRMAR SOSPECHOSO
+        </button>
+
+    </section>
+
+
+    <!-- =========================================================
+        REVELACIÓN - INTRODUCCIÓN
+    ========================================================== -->
+
+    <section id="screen-final-reveal-intro" class="screen">
+
+        <div class="classified">ARCHIVO_FINAL.exe</div>
+
+        <div class="success-icon">🔓</div>
+
+        <h2>
+            INFORMACIÓN<br>
+            DESCLASIFICADA
+        </h2>
+
+        <div class="story-box">
+
+            <p>
+                Bueno...
+            </p>
+
+            <p>
+                Ya que llegaron hasta aquí...
+            </p>
+
+            <p class="big-reveal">
+                👀
+            </p>
+
+            <p>
+                ¿QUÉ CREEN QUE ESTÁ PASANDO?
+            </p>
+
+        </div>
+
+        <button onclick="showScreen('screen-final-announcement')">
+            🔎 DESCUBRIR LA VERDAD
+        </button>
+
+    </section>
+
+
+    <!-- =========================================================
+        ANUNCIO DEL NUEVO MIEMBRO
+    ========================================================== -->
+
+    <section id="screen-final-announcement" class="screen">
+
+        <div class="icon">⁉️</div>
+
+        <h2>
+            UN NUEVO<br>
+            MIEMBRO
+        </h2>
+
+        <div class="story-box">
+
+            <p>
+                Bueno...
+            </p>
+
+            <p>
+                Va a haber un nuevo miembro
+                en la familia. 🐶👨‍👩‍👧‍👦❤️
+            </p>
+
+            <p class="quote">
+                PERO TODAVÍA FALTA SABER ALGO...
+            </p>
+
+            <p>
+                Antes de continuar...
+            </p>
+
+            <p>
+                <strong>
+                    DEBEN VOTAR.
+                </strong>
+            </p>
+
+        </div>
+
+        <button onclick="showScreen('screen-final-vote')">
+            CONTINUAR
+        </button>
+
+    </section>
+
+
+    <!-- =========================================================
+        VOTACIÓN NIÑO / NIÑA
+    ========================================================== -->
+
+    <section id="screen-final-vote" class="screen">
+
+        <div class="icon">🗳️</div>
+
+        <h2>
+            ¿QUÉ CREEN<br>
+            QUE VA A SER?
+        </h2>
+
+        <div class="story-box">
+
+            <p>
+                Discútanlo en grupo.
+            </p>
+
+            <p>
+                Cuando tengan una decisión...
+            </p>
+
+            <p class="quote">
+                VOTEN.
+            </p>
+
+        </div>
+
+        <div class="final-vote-buttons">
+
+            <button
+                class="final-vote-button"
+                onclick="registerFinalVote('niño')">
+                👦
+                <span>NIÑO</span>
+            </button>
+
+            <button
+                class="final-vote-button"
+                onclick="registerFinalVote('niña')">
+                👧
+                <span>NIÑA</span>
+            </button>
+
+        </div>
+
+        <div id="final-vote-feedback" class="feedback"></div>
+
+    </section>
+
+
+    <!-- =========================================================
+        RESULTADO - TROLL ELLE
+    ========================================================== -->
+
+    <section id="screen-final-elle" class="screen final-black-screen">
+
+        <div class="classified">
+            RESULTADO REGISTRADO...
+        </div>
+
+        <div id="countdown-elle" class="final-countdown">
+            3...<br>
+            2...<br>
+            1...
+        </div>
+
+        <div id="elle-reveal" class="hidden-final">
+
+            <p>ES UNNNNNNN...</p>
+
+            <h1>
+                ELLE 😂
+            </h1>
+
+            <p class="final-joke">
+               JAJAJA 😂😂😂 TIRASSS
+            </p>
+
+            <button onclick="showScreen('screen-final-boy-countdown')">
+                😂 BUENO, AHORA SÍ...
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+        RESULTADO REAL - NIÑO
+    ========================================================== -->
+
+    <section id="screen-final-boy-countdown" class="screen final-black-screen">
+
+        <div class="classified">
+            RESULTADO DEFINITIVO...
+        </div>
+
+        <div id="boy-countdown" class="final-countdown">
+            5...<br>
+            4...<br>
+            3...<br>
+            2...<br>
+            1...
+        </div>
+
+        <div id="boy-reveal" class="hidden-final">
+
+            <h1>
+                👶
+                <br>
+                ¡¡¡NIÑOOOOOOOOOO!!!
+            </h1>
+
+            <p>
+                🎉🎉🎉
+            </p>
+
+            <button onclick="showScreen('screen-final-parents-question')">
+                👀 PERO ESPEREN...
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+        ¿QUIÉNES SON LOS PAPÁS?
+    ========================================================== -->
+
+    <section id="screen-final-parents-question" class="screen">
+
+        <div class="icon">🤔</div>
+
+        <h2>
+            PERO ESPEREN...
+        </h2>
+
+        <div class="story-box">
+
+            <p>
+                Ya sabemos que es un niño...
+            </p>
+
+            <p class="big-reveal">
+                👶
+            </p>
+
+            <p>
+                Pero...
+            </p>
+
+            <p>
+                <strong>
+                    ¿QUIÉNES CREEN QUE SON LOS PAPÁS?
+                </strong>
+            </p>
+
+        </div>
+
+        <button onclick="showScreen('screen-final-clue')">
+            🕵️ NECESITAMOS UNA PISTA
+        </button>
+
+    </section>
+
+
+    <!-- =========================================================
+        PISTA - ECOGRAFÍA
+    ========================================================== -->
+
+    <section id="screen-final-clue" class="screen">
+
+        <div class="classified">
+            PISTA DESBLOQUEADA
+        </div>
+
+        <h2>
+            BUENO...
+        </h2>
+
+        <div class="story-box">
+
+            <p>
+                Les voy a dar una pista.
+            </p>
+
+            <p class="quote">
+                🔎 IDENTIFIQUEN AL PEQUEÑO.
+            </p>
+
+        </div>
+
+        <!--
+            CAMBIA ESTA RUTA POR EL NOMBRE REAL
+            DE TU FOTO DE ECOGRAFÍA.
+        -->
+
+        <div class="ultrasound-container">
+
+            <img
+                src="images/ecografia-bebe.jpg"
+                alt="Ecografía del bebé"
+                class="ultrasound-image"
+            >
+
+        </div>
+
+        <p class="small-text">
+            👶 ¿RECONOCEN A ESTE PEQUEÑO?
+        </p>
+
+        <button onclick="showScreen('screen-final-parents-reveal')">
+            🔓 REVELAR A LOS PAPÁS
+        </button>
+
+    </section>
+
+
+    <!-- =========================================================
+        REVELACIÓN DE LOS PAPÁS
+    ========================================================== -->
+
+    <section id="screen-final-parents-reveal" class="screen">
+
+        <div class="classified">
+            IDENTIDAD CONFIRMADA
+        </div>
+
+        <h2>
+            LOS PAPÁS SON...
+        </h2>
+
+        <div class="parents-container">
+
+            <!-- FOTO FRANCISCO -->
+
+            <div class="parent-card">
+
+                <!-- CAMBIA ESTA RUTA POR TU FOTO REAL -->
+
+                <img
+                    src="images/francisco-julieth.jpg"
+                    alt="Francisco"
+                    class="parent-image"
+                >
+
+                <h3>TORTOLITOS</h3>
+
+            </div>
+
+        </div>
+
+        <div class="final-parent-reveal">
+
+            <h1>
+                🎉 ¡¡¡FRANCISCO & JULIETH!!! 🎉
+            </h1>
+
+            <p>
+                ❤️ LA FAMILIA CRECE ❤️
+            </p>
+
+            <div class="final-baby">
+                👶
+            </div>
+
+        </div>
+
+        <!-- CONTENEDOR DEL CONFETI -->
+
+        <canvas id="confetti-canvas"></canvas>
+
+    </section>
+
+    <!-- =========================================
+        REVELACIÓN FINAL - BODA
+    ========================================= -->
+
+    <section id="screen-final-wedding" class="screen final-black-screen">
+
+        <div id="wedding-message-1" class="wedding-message">
+            <div class="icon">🤫</div>
+
+            <h2>
+                AH...
+            </h2>
+
+            <p>
+                SE ME OLVIDABA...
+            </p>
+        </div>
+
+
+        <div id="wedding-message-2" class="wedding-message" style="display: none;">
+
+            <div class="wedding-rings">
+                💍💍
+            </div>
+
+            <h1>
+                ¡¡¡SE VAN<br>
+                A CASAR!!!
+            </h1>
+
+            <div class="wedding-couple">
+                ❤️ FRANCISCO & JULIETH ❤️
+            </div>
+
+            <div class="wedding-emojis">
+                💒 💍 👰‍♀️ 🤵‍♂️ 💐
+            </div>
+
+            <p class="wedding-final-text">
+                ¡¡¡FELICIDADES!!!
+            </p>
+
+        </div>
+
+    </section>
 
     </main>
 
