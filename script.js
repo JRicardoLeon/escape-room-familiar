@@ -52,6 +52,8 @@ const questions = [
 
 function startMission() {
 
+    unlockFinalAudios();
+
     showScreen("screen-rules");
 }
 
@@ -417,9 +419,63 @@ const audios = {
 let currentAudio = null;
 
 
+/* =========================================================
+   DESBLOQUEAR AUDIOS FINALES EN MÓVILES
+========================================================= */
+
+let finalAudioUnlocked = false;
+
+function unlockFinalAudios() {
+
+    if (finalAudioUnlocked) {
+        return;
+    }
+
+    const finalAudios = [
+        audios.polvora,
+        audios.bebe,
+        audios.boda
+    ];
+
+    finalAudios.forEach(audio => {
+
+        if (!audio) {
+            return;
+        }
+
+        audio.volume = 0;
+
+        const promise = audio.play();
+
+        if (promise !== undefined) {
+
+            promise.then(() => {
+
+                audio.pause();
+                audio.currentTime = 0;
+
+            }).catch(() => {
+
+                // El navegador todavía puede bloquearlo.
+                // Se volverá a intentar en otra interacción.
+
+            });
+
+        }
+
+    });
+
+    finalAudioUnlocked = true;
+}
+
+
 function stopAllAudio() {
 
     Object.values(audios).forEach(audio => {
+
+        if (!audio) {
+            return;
+        }
 
         audio.pause();
         audio.currentTime = 0;
@@ -432,6 +488,10 @@ function stopAllAudio() {
     if (typeof musicTracks !== "undefined") {
 
         Object.values(musicTracks).forEach(song => {
+
+            if (!song) {
+                return;
+            }
 
             song.pause();
             song.currentTime = 0;
@@ -492,7 +552,6 @@ function playFinalAudio(name, volume = 0.8) {
         return;
     }
 
-    // Detener los demás audios ambientales
     Object.values(audios).forEach(otherAudio => {
 
         if (otherAudio !== audio) {
@@ -504,7 +563,6 @@ function playFinalAudio(name, volume = 0.8) {
 
     });
 
-    // Detener intros musicales
     if (typeof musicTracks !== "undefined") {
 
         Object.values(musicTracks).forEach(song => {
