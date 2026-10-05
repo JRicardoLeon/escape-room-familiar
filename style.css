@@ -866,3 +866,473 @@ button:active {
     }
 
 }
+/* =========================================================
+   RESPONSIVE FINAL - CELULARES
+========================================================= */
+
+@media (max-width: 700px) {
+
+    /* =========================
+       PANTALLA GENERAL
+    ========================= */
+
+    .screen {
+        min-height: 100svh;
+        width: 100%;
+        padding: 25px 15px;
+        overflow-x: hidden;
+    }
+
+    /* =========================
+       TEXTOS GENERALES
+    ========================= */
+
+    h1 {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+        line-height: 1.05;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    h2 {
+        font-size: clamp(1.6rem, 8vw, 2.8rem);
+        line-height: 1.1;
+        letter-spacing: 1px;
+        margin-bottom: 25px;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    p {
+        font-size: clamp(1rem, 4.5vw, 1.4rem);
+        line-height: 1.4;
+        max-width: 100%;
+    }
+
+    .icon {
+        font-size: 55px;
+        margin-bottom: 15px;
+    }
+
+    /* =========================
+       INICIO
+    ========================= */
+
+    .classified {
+        font-size: 14px;
+        padding: 7px 12px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .case-number {
+        font-size: 15px;
+        letter-spacing: 3px;
+        margin-bottom: 25px;
+    }
+
+    .intro-text {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .classified-text {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+    }
+
+    /* =========================
+       BOTONES
+    ========================= */
+
+    button {
+        width: 100%;
+        max-width: 360px;
+        min-height: 52px;
+        padding: 15px 18px;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    /* =========================
+       REGLAS
+    ========================= */
+
+    .rules {
+        width: 100%;
+        margin-bottom: 25px;
+    }
+
+    .rules p {
+        padding: 11px 0;
+        font-size: 16px;
+    }
+
+    .warning {
+        padding: 15px;
+        margin-bottom: 25px;
+        font-size: 15px;
+    }
+
+    /* =========================
+       ENCABEZADOS DE PRUEBAS
+    ========================= */
+
+    .test-header {
+        width: 100%;
+        margin-bottom: 25px;
+        font-size: 12px;
+        letter-spacing: 1px;
+        gap: 8px;
+    }
+
+    .question-counter {
+        font-size: 15px;
+        margin-bottom: 15px;
+    }
+
+    /* =========================
+       CAJAS DE PREGUNTAS
+    ========================= */
+
+    .question-box {
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+
+    .question-box h3 {
+        font-size: clamp(1.3rem, 6vw, 2rem);
+        line-height: 1.25;
+        overflow-wrap: break-word;
+    }
+
+    .answers {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .answer-button {
+        padding: 16px 14px;
+        font-size: 15px;
+        line-height: 1.3;
+        min-height: 55px;
+    }
+
+    .feedback {
+        min-height: 45px;
+        margin-top: 15px;
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+    /* =========================
+       STORY BOX
+    ========================= */
+
+    .story-box {
+        width: 100%;
+        padding: 20px 15px;
+        margin-bottom: 20px;
+    }
+
+    .story-box p {
+        margin-bottom: 15px;
+    }
+
+    .quote {
+        font-size: clamp(1.5rem, 8vw, 2.8rem) !important;
+        line-height: 1.15;
+        letter-spacing: 1px;
+        overflow-wrap: break-word;
+        word-break: normal;
+    }
+
+    .investigation-text {
+        margin-bottom: 25px;
+    }
+
+    /* =========================
+       EVIDENCIAS
+    ========================= */
+
+    .evidence-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .evidence-card {
+        min-height: 0;
+        padding: 20px 15px;
+    }
+
+    .evidence-icon {
+        font-size: 45px;
+        margin-bottom: 12px;
+    }
+
+    .evidence-card p {
+        font-size: 16px;
+    }
+
+    .evidence-number {
+        margin-bottom: 12px;
+    }
+
+    /* =========================
+       INGREDIENTES
+    ========================= */
+
+    .ingredients {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+
+    .ingredient-card {
+        min-height: 130px;
+        padding: 20px 15px;
+    }
+
+    .ingredient-icon {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+    /* =========================
+       REVELACIONES
+    ========================= */
+
+    .big-reveal {
+        font-size: clamp(2rem, 10vw, 4rem);
+        line-height: 1.1;
+        letter-spacing: 1px;
+        margin: 20px 0;
+        overflow-wrap: break-word;
+    }
+
+    .success-icon {
+        font-size: 65px;
+        margin-bottom: 15px;
+    }
+
+    .score {
+        font-size: 45px;
+        margin: 15px 0 25px;
+    }
+
+    .clue {
+        width: 100%;
+        padding: 18px 15px;
+        margin-bottom: 12px;
+    }
+
+    .clue strong {
+        font-size: clamp(1.5rem, 7vw, 2.2rem);
+        letter-spacing: 2px;
+        overflow-wrap: break-word;
+    }
+
+    .small-text {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    /* =========================
+       DICCIONARIO
+    ========================= */
+
+    .dictionary {
+        gap: 10px;
+        margin-bottom: 25px;
+    }
+
+    .dictionary-entry {
+        padding: 15px;
+        gap: 8px;
+    }
+
+    .word {
+        font-size: 17px;
+        letter-spacing: 1px;
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    .meaning {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    /* =========================
+       MÚSICA
+    ========================= */
+
+    .music-player {
+        padding: 20px 15px;
+        margin: 10px auto 25px;
+    }
+
+    .music-icon {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+
+    .music-player p {
+        margin-bottom: 18px;
+    }
+
+    .play-button {
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* =========================
+       VOTACIÓN
+    ========================= */
+
+    .final-vote-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin: 20px 0;
+    }
+
+    .final-vote-button {
+        width: 80%;
+        min-width: 0;
+        min-height: 100px;
+        font-size: 2rem;
+    }
+
+    .final-vote-button span {
+        font-size: 1rem;
+    }
+
+    /* =========================
+       PANTALLAS NEGRAS
+    ========================= */
+
+    .final-countdown {
+        font-size: clamp(1.8rem, 9vw, 3rem);
+        line-height: 1.35;
+        margin: 25px 0;
+    }
+
+    #elle-reveal h1,
+    #boy-reveal h1 {
+        font-size: clamp(2.2rem, 11vw, 4rem);
+        line-height: 1.05;
+        letter-spacing: 1px;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .final-joke {
+        font-size: 1.1rem;
+        margin: 20px 0;
+    }
+
+    /* =========================
+       ECOGRAFÍA
+    ========================= */
+
+    .ultrasound-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px auto;
+    }
+
+    .ultrasound-image {
+        width: 100%;
+        max-width: 100%;
+        max-height: 40vh;
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* =========================
+       PAPÁS
+    ========================= */
+
+    .parents-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin: 15px auto;
+    }
+
+    .parent-card {
+        width: 75%;
+        max-width: 250px;
+    }
+
+    .parent-image {
+        width: 100%;
+        height: auto;
+        max-height: 280px;
+        object-fit: cover;
+    }
+
+    .parent-card h3 {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+
+    .final-parent-reveal {
+        margin-top: 20px;
+    }
+
+    .final-parent-reveal h1 {
+        font-size: clamp(1.7rem, 8vw, 2.5rem);
+        line-height: 1.15;
+        letter-spacing: 1px;
+    }
+
+    .final-parent-reveal p {
+        font-size: 1.1rem;
+    }
+
+    .final-baby {
+        font-size: 3.5rem;
+        margin-top: 15px;
+    }
+
+    /* =========================
+       BODA
+    ========================= */
+
+    .wedding-message h2 {
+        font-size: clamp(1.8rem, 9vw, 2.8rem);
+    }
+
+    .wedding-message h1 {
+        font-size: clamp(2rem, 10vw, 3.5rem);
+        line-height: 1.05;
+        letter-spacing: 1px;
+    }
+
+    .wedding-message p {
+        font-size: 1.3rem;
+    }
+
+    .wedding-rings {
+        font-size: 4rem;
+    }
+
+    .wedding-couple {
+        font-size: clamp(1rem, 5vw, 1.5rem);
+    }
+
+    .wedding-emojis {
+        font-size: clamp(1.7rem, 8vw, 2.5rem);
+    }
+
+    .wedding-final-text {
+        font-size: 1.5rem !important;
+    }
+}
